@@ -1,20 +1,18 @@
-// script responsavel pela automacao do menu hamburger
-
-const btnmobile = document.getElementById('btn-mobile');
-// const >> declara nossa variavel no uso do decorrer do codigo
+const btnMobile = document.getElementById('btn-mobile');
+// Declarando a variável com o CONST
 
 function toggleMenu(event) {
     if (event.type === 'touchstart') event.preventDefault();
     const nav = document.getElementById('nav');
     nav.classList.toggle('active');
     const active = nav.classList.contains('active');
-    event.currentTarget.setAttribute('aria-expanded'), active;
+    event.currentTarget.setAttribute('aria-expanded', active);
         if (active) {
-            event.currentTarget.setAttribute('aria-label, Fechar menu');
+            event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
         } else {
-            event.currentTarget.setAttribute('aria-label, Abrir Menu');
+            event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
         }
 }
 
-btnmobile.addEventListener('click', toggleMenu)
-btnmobile;addEventListener('touchstart', toggleMenu)
+btnMobile.addEventListener('click', toggleMenu)
+btnMobile.addEventListener('touchstart', toggleMenu)
